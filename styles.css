@@ -1,0 +1,301 @@
+@font-face {
+    font-family: "Avant Garde Gothic";
+    src: url(avantgardegothic.woff);
+}
+
+@font-face {
+    font-family: "Helvetica";
+    src: url(helvetica.woff);
+}
+
+navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    width: 100%;
+    border-bottom: 2.5px solid #363636;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    background: linear-gradient(196deg, #232323 0%, #1B1B1B 99.74%);
+}   
+
+/* Body content wrapper!!!*/
+.content-wrapper {
+    padding: 0 56px;
+}
+
+p {
+    color: #CBCBCB;
+}
+
+/* Navbar Styles */
+.navbar-container {
+    width: 100%;
+    padding: 0px 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-text a {
+    text-decoration: none;
+    
+}
+
+.navbar-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #f7f7f7;
+}
+
+.navbar-text ul li {
+    padding: 0;
+    list-style: none;
+    display: inline;
+    margin-right: 56px;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+/* Navbar Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 50px;
+    width: 210px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    align-items: center;
+}
+
+/* Contact Button */
+.contact-button {
+    display: flex;
+    width: 120px;
+    height: 40px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    border-radius: 8px;
+    background: #F5AF0F;
+    color: #f7f7f7;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.5s ease;
+}
+
+.contact-button:hover {
+    cursor: pointer;
+    background-color: #e19e0c;
+}
+
+.nav-contact-button {
+    display: flex;
+    width: 120px;
+    height: 40px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    border-radius: 8px;
+    background: #F5AF0F;
+    color: #f7f7f7;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.5s ease;
+}
+
+.nav-contact-button:hover {
+    cursor: pointer;
+    background-color: #e19e0c;
+}
+
+/* Hero Section */
+.hero-content {
+    margin: 0;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-top-content {
+    text-align: center;
+    margin:0;
+    color: #f7f7f7;
+    font-family: 'Avant Garde Gothic', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.hero-bottom-content{
+    text-align: center;
+    margin: 0;
+    color: #F5AF0F;
+    font-family: Helvetica;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.hero-subtext {
+    margin-top: 16px;
+    color: #CBCBCB;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    max-width: 900px;
+}
+
+.hero-video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+   
+}
+
+.hero-video {
+    display: flex;
+    border-radius: 10px;
+    border: 24px solid #282828;
+    box-shadow: 4px 4px 10px 0 rgba(70, 70, 70, 0.25);
+}
+
+/* Proud Partners Section */
+
+.burger {
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #f7f7f7;
+    margin: 5px;
+}
+
+@media screen and (max-width: 990px) {
+    .navbar-container {
+        width: 100%;
+        padding: 0px 32px;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    } 
+    
+    .navbar-items {
+        position: absolute;
+        height: 20vh;
+        right: 0px;
+        left: 0px;
+        top: 12vh;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .navbar-text {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar-text {
+        opacity: 0;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    .navbar-text ul li {
+        gap: 0;
+        margin: 0;
+    }
+    
+    .navbar-container {
+        align-items: center;
+    }
+    
+    .burger {
+        display: block;
+        cursor: pointer;    
+    }
+}
+
+.navbar-items-active {
+    transform: translateY(0);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
