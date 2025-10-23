@@ -12,7 +12,7 @@ navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 12vh;
+    min-height: 11vh;
     width: 100%;
     border-bottom: 2.5px solid #363636;
 }
@@ -21,8 +21,42 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Helvetica', sans-serif;
-    background: linear-gradient(196deg, #232323 0%, #1B1B1B 99.74%);
+    background: rgb(21 23 25);
 }   
+
+h1 {
+    color: #f7f7f7;
+    font-family: 'Avant Garde Gothic', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    color: #F5AF0F;
+    font-family: 'Avant Garde Gothic', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    color: #CBCBCB;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h4 {
+    color: #f7f7f7;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+}
 
 /* Body content wrapper!!!*/
 .content-wrapper {
@@ -195,8 +229,6 @@ p {
     box-shadow: 4px 4px 10px 0 rgba(70, 70, 70, 0.25);
 }
 
-/* Proud Partners Section */
-
 .burger {
     display: none;
 }
@@ -206,6 +238,63 @@ p {
     height: 3px;
     background-color: #f7f7f7;
     margin: 5px;
+}
+
+/* Proud Partners Section */
+
+.proud-partners-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.partner-logo {
+    height: 60px;
+    width: auto;
+    margin: 0 20px;
+}
+
+/* About us Section w/ grid layout */
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 48px;
+    border: 2.5px solid #363636;
+    background: #272727;
+    padding: 40px;
+    height: auto;
+}
+
+.about-us-info {
+    width: 50%;
+}
+
+.about-us-header {
+    gap: 0;
+    margin: 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-item {
+    position: relative;
+    background-image: url('images/service.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+    width: 180px;
 }
 
 @media screen and (max-width: 990px) {
