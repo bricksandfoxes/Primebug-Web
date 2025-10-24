@@ -72,6 +72,7 @@ h5 {
 
 p {
     color: #CBCBCB;
+    font-size: 18px;
 }
 
 /* Navbar Styles */
@@ -92,7 +93,16 @@ p {
 
 .navbar-text a {
     text-decoration: none;
-    
+}
+
+.nav-link{
+    color: #f7f7f7;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #F5AF0F;
 }
 
 .navbar-text {
@@ -232,8 +242,10 @@ p {
 .hero-video {
     display: flex;
     border-radius: 10px;
-    border: 24px solid #282828;
-    box-shadow: 4px 4px 10px 0 rgba(70, 70, 70, 0.25);
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border: 2.5px solid #363636;
 }
 
 .burger {
@@ -254,7 +266,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px 0px;
+    margin: 40px 0px 40px 0px;
 }
 
 .partner-logo {
@@ -344,7 +356,7 @@ p {
 }
 
 .stat-number {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
     color: #f7f7f7;
 }
@@ -355,6 +367,7 @@ p {
 }
 
 @media screen and (max-width: 990px) {
+    /* Navbar Content */ 
     .navbar-container {
         width: 100%;
         padding: 0px 32px;
@@ -362,6 +375,92 @@ p {
         justify-content: space-between;
         height: 100%;
     }
+
+    /* About Us Section */
+    .about-us {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 40px;
+        overflow: hidden;
+    }
+
+    .about-us-info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .about-us-header {
+        width: 100%;
+    }
+    
+    .services-container {
+        display: flex;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .services-grid {
+        display: flex;
+        margin-bottom: 10px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding: 20px;
+        anchor-name: services-grid;
+    }
+
+    .service-item {
+        width: 30px;
+        height: 300px;
+        padding: 20px;
+        display: flex;
+        gap: 4vw;
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+    }
+
+    /* Arrow Buttons */ 
+    .services-grid::scroll-button(*) {
+        border: 0;
+        font-size: 2rem;
+        background: none;
+        color: black;
+        opacity: 0.7;
+        cursor: pointer;
+        position: absolute;
+        position-anchor: services-grid;
+    }
+
+    .services-grid::scroll-button(*):hover,
+    .services-grid::scroll-button(*):focus {
+        opacity: 1;
+    }
+
+    .services-grid::scroll-button(*):active {
+        translate: 1px 1px;
+    }
+
+    .services-grid::scroll-button(*):disabled {
+        opacity: 0.3;
+        cursor: unset;
+    }
+
+    .services-grid::scroll-button(left) {
+        content: '<';
+        right: 25%;
+        color: white;
+    }
+
+    .services-grid::scroll-button(right) {
+        content: '>';
+        right: 15%;
+        color: white;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -369,6 +468,14 @@ p {
         overflow-x: hidden;
     } 
     
+    /* Navbar Content */
+    .navbar-container {
+        align-items: center;
+    }
+
+    .navbar-dropdown {
+
+    }
     .navbar-items {
         position: absolute;
         height: 20vh;
@@ -382,8 +489,12 @@ p {
         width: 100%;
         transform: translateY(-100%);
         transition: transform 0.3s ease-in;
-        z-index: -1;
         opacity: 0;
+    }
+
+    .navbar-items.navbar-items-active {
+        opacity: 1;
+        background-color: red;
     }
 
     .navbar-text {
@@ -408,13 +519,19 @@ p {
         margin: 0;
     }
     
-    .navbar-container {
-        align-items: center;
-    }
-    
     .burger {
         display: block;
         cursor: pointer;    
+    }
+
+    /* About Us Section */
+    .services-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .about-us {
+        padding: 20px;
     }
 }
 
